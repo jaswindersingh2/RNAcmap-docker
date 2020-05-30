@@ -17,7 +17,7 @@ Please install docker engine and download NCBI's nt database from the links show
 * [Docker](https://docs.docker.com/engine/installation/)
 * [NCBI's nucleotide database](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
 
-Please unzip the downloaded nt database. Make sure you have enough space on system as it of size around 270 GBs)
+Please unzip the downloaded nt database. Make sure you have enough space on system as it of size around 270 GBs
 
 After docker installation and nt database downlaod, RNAcmap is good to run.
 
@@ -41,19 +41,19 @@ If you setup file system on your computer as follows:
 home # cd ~/
 |
 |___user_name # mkdir RNAcmap_data && cd RNAcmap
-	|
-	|___RNAcmap_data # mkdir inputs database outputs
-	   |
+    |
+    |___RNAcmap_data # mkdir inputs database outputs
+       |
        |___inputs # copy your input sequence file (say seq.fasta) in this directory 
            |
            |___seq.fasta # must in the fasta format with *.fasta extension.
            |.......
        | 
        |___database # copy the nt database file name nt (don't rename) in this directory
-		 	|
-		 	|___nt 
-	   |
-	   |___outputs
+           |
+           |___nt 
+       |
+       |___outputs
 
 ```
 
