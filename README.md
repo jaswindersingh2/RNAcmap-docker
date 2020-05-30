@@ -48,12 +48,12 @@ home # cd ~/
            |
            |___seq.fasta # must in the fasta format with *.fasta extension.
            |.......
-        | 
-        |___database # copy the nt database file name nt (don't rename) in this directory
+       | 
+       |___database # copy the nt database file name nt (don't rename) in this directory
 		 	|
 		 	|___nt 
-		|
-		|___outputs
+	   |
+	   |___outputs
 
 ```
 
