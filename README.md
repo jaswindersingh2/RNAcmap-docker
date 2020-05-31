@@ -73,30 +73,31 @@ Above command saves predicted secondary structure files (.ct, .bpseq, .prob etc)
 Usage Example
 ------------------
 
-If you setup file system on your computer as follows:
+If create file system for RNAcmap in your /home/$USER/ diretory as follows:
 
 ```
-home # cd ~/
+home/$USER (`mkdir RNAcmap_data && cd RNAcmap`)
 |
-|___user_name # mkdir RNAcmap_data && cd RNAcmap
-    |
-    |___RNAcmap_data # mkdir inputs database outputs
+|___RNAcmap_data (`mkdir inputs database outputs`)
+   |
+   |___inputs (copy your input sequence file (say seq.fasta) in this directory)
        |
-       |___inputs # copy your input sequence file (say seq.fasta) in this directory 
-           |
-           |___seq.fasta # must in the fasta format with *.fasta extension.
-           |.......
-       | 
-       |___database # copy the nt database file name nt (don't rename) in this directory
-           |
-           |___nt 
+       |___seq1.fasta
        |
-       |___outputs
+       |___seq2.fasta
+   | 
+   |___database (copy the unzipped nt database file named 'nt' (don't rename) in this directory)
+       |
+       |___nt 
+   |
+   |___outputs  (RNAcmap results will be saved in this directory)
 
 ```
 
-then, the following command can be used for the prediction with only replacing 'user_name' with actual user on the system:
+then, the following command can be used for the prediction without any change on your system:
 
 ```
 docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/$USER/rnacmap_data/inputs/:/mnt jaswindersingh2/rnacmap:v1 RNAcmap mnt/seq.fasta RNAfold GRMLIN
 ```
+
+You can provide the any other input sequence, Secondary Structure Predictor (RNAfold or SPOT-RNA) and DCA predictor (GREMLIN or plmc) but order of the arguments should remains same. 
