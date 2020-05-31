@@ -12,7 +12,7 @@ RNAcmap predictor requires only a standard computer with around 32 GB RAM to sup
 Software Requirments:
 ----
 
-Please install docker engine for any given OS and distro as follows:
+Please install docker engine for any given OS or distro from link shown below:
 
 * Docker-Linux-Platforms: [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Centos](https://docs.docker.com/engine/install/centos/), [Debian](https://docs.docker.com/engine/install/debian/), [Fedora](https://docs.docker.com/engine/install/fedora/)
 * [Docker-Mac](https://docs.docker.com/docker-for-mac/install/)
@@ -28,49 +28,34 @@ After docker installation and nt database downlaod, RNAcmap is good to run.
 
 Installation Instructions
 ====
-Docker can be easily installed for Windows and Mac OS by downloading and running '.exe' and '.dmg' file from the link mentioned above. For Linux, the following steps can used to install docker for Ubuntu Linux distro as follows:
+Docker can be easily installed for Windows and Mac OS by downloading and running '.exe' and '.dmg' file from the link mentioned above. For Linux, the following steps can used to install docker on Ubuntu Xenial 16.04 (LTS), Ubuntu Bionic 18.04 (LTS), and Ubuntu Eoan 19.10 distro as follows:
 
-```
-sudo apt-get remove docker docker-engine docker.io containerd runc
-```  
 
-```
-sudo apt-get update
-```
+1. `sudo apt-get remove docker docker-engine docker.io containerd runc`
 
-```
-sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-```
+2. `sudo apt-get update`
 
-```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-```
+3. `sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common`
 
-```
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-```
+4. `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 
-```
-sudo apt-get update
-```
+5. `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
 
-```
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-```
+6. `sudo apt-get update`
 
-```
-sudo groupadd docker && sudo usermod -aG docker $USER
-```
+7. `sudo apt-get install docker-ce docker-ce-cli containerd.io`
+
+8. `sudo groupadd docker && sudo usermod -aG docker $USER`
 
 To brings changes into effect, you need to logout and then login to your system.
 
 To verify the correct installation, you can run the following command:
-```
-docker run hello-world
-```
+
+9. `docker run hello-world`
+
 The output of above should give message about correct installation.
 
-To install docker for other Linux distro, please follows the steps mentioned in the links provided above.
+To install docker for other Linux distro, please follows the steps on the links provided above.
 
 Usage
 -------------------
