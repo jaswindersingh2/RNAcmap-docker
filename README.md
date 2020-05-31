@@ -73,7 +73,7 @@ Above command saves predicted secondary structure files (.ct, .bpseq, .prob etc)
 Usage Example
 ------------------
 
-If create file system for RNAcmap in your /home/$USER/ diretory as follows:
+If you create file system for RNAcmap in your /home/$USER/ diretory as follows:
 
 ```
 home/$USER (`mkdir RNAcmap_data && cd RNAcmap`)
