@@ -80,13 +80,13 @@ home/$USER (`mkdir RNAcmap_data && cd RNAcmap`)
 |
 |___RNAcmap_data (`mkdir inputs database outputs`)
    |
-   |___inputs (copy your input sequence file (say seq.fasta) in this directory)
+   |___inputs (copy your input sequence file (say seq1.fasta, seq2.fasta etc) in this directory)
        |
        |___seq1.fasta
        |
        |___seq2.fasta
    | 
-   |___database (copy the unzipped nt database file named 'nt' (don't rename) in this directory)
+   |___database (copy the unzipped nt database file named 'nt' (don't rename) in this directory. If database is not downloaded, RNAcmap provide option for download during running.)
        |
        |___nt 
    |
@@ -101,3 +101,5 @@ docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/
 ```
 
 You can provide the any other input sequence, Secondary Structure Predictor (RNAfold or SPOT-RNA) and DCA predictor (GREMLIN or plmc) but order of the arguments should remains same. 
+
+If you are running RNAcmap without pre downloading of the nt database, then it can take couple of hours for prediction for first time. 
