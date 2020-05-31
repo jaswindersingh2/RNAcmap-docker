@@ -15,12 +15,12 @@ Software Requirments:
 Please install docker engine for any given OS and distro as follows:
 
 * Docker-Linux-Platforms: [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Centos](https://docs.docker.com/engine/install/centos/), [Debian](https://docs.docker.com/engine/install/debian/), [Fedora](https://docs.docker.com/engine/install/fedora/)
-* Docker-Mac[https://docs.docker.com/docker-for-mac/install/]
-* Docker-Windows[https://docs.docker.com/docker-for-windows/install/]
+* [Docker-Mac](https://docs.docker.com/docker-for-mac/install/)
+* [Docker-Windows](https://docs.docker.com/docker-for-windows/install/)
 
 In additions, need to download NCBI's nt database file from the links shown belows:
 
-* [NCBI's nucleotide database](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/)
+* NCBI's nucleotide database [ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/]
 
 Download the file 'nt.gz' from the link above and unzip without renaming it. Make sure, your system have enough space as it is of size around 270 GBs after unzip.
 
