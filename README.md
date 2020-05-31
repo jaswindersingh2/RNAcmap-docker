@@ -45,13 +45,15 @@ Docker can be easily installed for Windows and Mac OS by downloading and running
 
 7. `sudo apt-get install docker-ce docker-ce-cli containerd.io`
 
-8. `sudo groupadd docker && sudo usermod -aG docker $USER`
+8. `sudo groupadd docker`
+
+9. `sudo usermod -aG docker $USER`
 
 To brings changes into effect, you need to logout and then login to your system.
 
 To verify the correct installation, you can run the following command:
 
-9. `docker run hello-world`
+10. `docker run hello-world`
 
 The output of above should give message about correct installation.
 
