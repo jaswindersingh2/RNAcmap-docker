@@ -18,7 +18,7 @@ Please install docker engine for any given OS or distro from link shown below:
 * [Docker-Mac](https://docs.docker.com/docker-for-mac/install/)
 * [Docker-Windows](https://docs.docker.com/docker-for-windows/install/)
 
-In additions, need to download NCBI's nt database file from the links shown belows:
+In additions, need to download NCBI's nt database file from the links shown below:
 
 * NCBI's nucleotide database (ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/)
 
@@ -97,7 +97,7 @@ home/$USER (`mkdir RNAcmap_data && cd RNAcmap`)
 then, the following command can be used for the prediction without any change on your system:
 
 ```
-docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/$USER/rnacmap_data/inputs/:/mnt jaswindersingh2/rnacmap:v1 RNAcmap mnt/seq.fasta RNAfold GRMLIN
+docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/$USER/rnacmap_data/inputs/:/mnt jaswindersingh2/rnacmap:v1 RNAcmap mnt/seq1.fasta RNAfold GRMLIN
 ```
 
 You can provide the any other input sequence, Secondary Structure Predictor (RNAfold or SPOT-RNA) and DCA predictor (GREMLIN or plmc) but order of the arguments should remains same. 
