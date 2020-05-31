@@ -102,4 +102,4 @@ docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/
 
 You can provide the any other input sequence, Secondary Structure Predictor (RNAfold or SPOT-RNA) and DCA predictor (GREMLIN or plmc) but order of the arguments should remains same. 
 
-If you are running RNAcmap without pre downloading of the nt database, then it can take couple of hours for prediction for first time. 
+If you are running RNAcmap without pre downloading of the nt database, then it can take couple of hours for first time prediction. 
