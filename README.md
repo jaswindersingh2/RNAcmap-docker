@@ -76,9 +76,9 @@ Usage Example
 If you create file system for RNAcmap in your /home/$USER/ directory as follows:
 
 ```
-/home/$USER (`mkdir RNAcmap_data && cd RNAcmap_data`)
+/home/$USER ("$ mkdir RNAcmap_data; cd RNAcmap_data")
 |
-|___RNAcmap_data (`mkdir database outputs` and copy your input sequences (like seq1.fasta, seq2.fasta, etc) in this directory)
+|___RNAcmap_data ("$ mkdir database outputs" and copy your input sequences (for example seq1.fasta, seq2.fasta, etc) in this directory)
     |
     |___seq1.fasta
     |

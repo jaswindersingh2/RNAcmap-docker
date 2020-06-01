@@ -3,7 +3,7 @@ MAINTAINER Jaswinder Singh (jaswinder.singh3@griffithuni.edu.au)
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update && apt-get install -y build-essential wget virtualenv git python-minimal
 
-RUN wget -c 'https://www.dropbox.com/s/g4fhgvtz877hav6/RNAcmap.tar.gz' && tar -xvzf RNAcmap.tar.gz && rm RNAcmap.tar.gz && mkdir nt_database
+RUN wget -c 'https://www.dropbox.com/s/phpqlqv8f1pfpth/RNAcmap.tar.gz' && tar -xvzf RNAcmap.tar.gz && rm RNAcmap.tar.gz && mkdir nt_database
 WORKDIR RNAcmap
 
 RUN wget -c 'https://www.dropbox.com/s/fyz5fymzjti2vg5/rnacmap_bin.tar.gz' && tar -xvzf rnacmap_bin.tar.gz && rm rnacmap_bin.tar.gz
