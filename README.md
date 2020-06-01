@@ -28,7 +28,7 @@ After docker installation and nt database downlaod, RNAcmap is good to run.
 
 Installation Instructions
 ====
-Docker can be easily installed for Windows and Mac OS by downloading and running '.exe' and '.dmg' file from the link mentioned above. For Linux, the following steps can used to install docker on Ubuntu Xenial 16.04 (LTS), Ubuntu Bionic 18.04 (LTS), and Ubuntu Eoan 19.10 distro as follows:
+Docker can be easily installed for Windows and Mac OS by downloading and running '.exe' and '.dmg' file from the link mentioned above. For Linux, the following steps can used to install docker on Ubuntu Xenial 16.04 (LTS), Ubuntu Bionic 18.04 (LTS), and Ubuntu Eoan 19.10 distro.
 
 
 1. `sudo apt-get remove docker docker-engine docker.io containerd runc`
@@ -65,7 +65,7 @@ Usage
 To run RNAcmap, you need provide path to the input sequence file and nt database to the Docker container. Therefore, you have to mount the file system of your computer (the host) in the Docker container (the guest). For prediction, please run the following command by replacing 'path\_to\_directory\_with\_input\_sequence\_file' with absolute path to directory contains input sequence fasta file and 'path\_to\_directory\_with\_nt\_database\_file' with absolute path to directory contains nt database file in the following command:
 
 ```
-docker run --rm -ti -v path_to_directory_with_input_sequence_file/:/mnt -v path_to_directory_with_nt_database_file/:/nt_database jaswindersingh2/rnacmap RNAcmap mnt/sequences.fasta RNAfold GREMLIN
+docker run --rm -ti -v path_to_directory_with_input_sequence_file/:/mnt -v path_to_directory_with_nt_database_file/:/nt_database jaswindersingh2/rnacmap:latest RNAcmap mnt/sequences.fasta RNAfold GREMLIN
 ```
 
 Above command saves predicted secondary structure files (.ct, .bpseq, .prob etc) in the 'outputs' folder within the directory 'path\_to\_directory\_with\_input\_sequence\_file'.
@@ -73,31 +73,29 @@ Above command saves predicted secondary structure files (.ct, .bpseq, .prob etc)
 Usage Example
 ------------------
 
-If you create file system for RNAcmap in your /home/$USER/ diretory as follows:
+If you create file system for RNAcmap in your /home/$USER/ directory as follows:
 
 ```
 home/$USER (`mkdir RNAcmap_data && cd RNAcmap`)
 |
-|___RNAcmap_data (`mkdir inputs database outputs`)
-   |
-   |___inputs (copy your input sequence file (say seq1.fasta, seq2.fasta etc) in this directory)
-       |
-       |___seq1.fasta
-       |
-       |___seq2.fasta
-   | 
-   |___database (copy the unzipped nt database file named 'nt' (don't rename) in this directory. If database is not downloaded, RNAcmap provide option for download during running.)
-       |
-       |___nt 
-   |
-   |___outputs  (RNAcmap results will be saved in this directory)
+|___RNAcmap_data (`mkdir database outputs` and copy your input sequences (like seq1.fasta, seq2.fasta, etc) in this directory)
+    |
+    |___seq1.fasta
+    |
+    |___seq2.fasta
+    | 
+    |___database (copy the unzipped nt database file named 'nt' (don't rename) in this directory. If database is not downloaded, RNAcmap provide option for download during running.)
+        |
+        |___nt 
+    |
+    |___outputs  (RNAcmap results will be saved in this directory)
 
 ```
 
 then, the following command can be used for the prediction without any change on your system:
 
 ```
-docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/$USER/rnacmap_data/inputs/:/mnt jaswindersingh2/rnacmap:v1 RNAcmap mnt/seq1.fasta RNAfold GRMLIN
+docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/$USER/rnacmap_data/inputs/:/mnt jaswindersingh2/rnacmap:latest RNAcmap mnt/seq1.fasta RNAfold GRMLIN
 ```
 
 You can provide the any other input sequence, Secondary Structure Predictor (RNAfold or SPOT-RNA) and DCA predictor (GREMLIN or plmc) but order of the arguments should remains same. 
