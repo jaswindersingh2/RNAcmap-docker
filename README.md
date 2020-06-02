@@ -95,7 +95,7 @@ If you create file system for RNAcmap in your /home/$USER/ directory as follows:
 then, the following command can be used for the prediction without any change on your system:
 
 ```
-docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/$USER/rnacmap_data/inputs/:/mnt jaswindersingh2/rnacmap:latest RNAcmap mnt/seq1.fasta RNAfold GRMLIN
+docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/$USER/RNAcmap_data/:/mnt jaswindersingh2/rnacmap:latest RNAcmap mnt/seq1.fasta RNAfold GRMLIN
 ```
 
 You can provide the any other input sequence, Secondary Structure Predictor (RNAfold or SPOT-RNA) and DCA predictor (GREMLIN or plmc) but order of the arguments should remains same. 
