@@ -12,7 +12,7 @@ RNAcmap predictor requires only a standard computer with around 32 GB RAM to sup
 Software Requirments:
 ----
 
-Please install docker engine for any given OS or distro from link shown below:
+Please install docker-engine for any given OS or distro from link shown below:
 
 * Docker-Linux-Platforms: [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Centos](https://docs.docker.com/engine/install/centos/), [Debian](https://docs.docker.com/engine/install/debian/), [Fedora](https://docs.docker.com/engine/install/fedora/)
 * [Docker-Mac](https://docs.docker.com/docker-for-mac/install/)
@@ -28,7 +28,7 @@ After docker installation and nt database downlaod, RNAcmap is good to run.
 
 Installation Instructions
 ====
-Docker can be easily installed for Windows and Mac OS by downloading and running '.exe' and '.dmg' file from the link mentioned above. For Linux, the following steps can used to install docker on Ubuntu Xenial 16.04 (LTS), Ubuntu Bionic 18.04 (LTS), and Ubuntu Eoan 19.10 distro.
+Docker can be easily installed for Windows and Mac OS by downloading and running '.exe' and '.dmg' file from the link mentioned above. For Linux, the following steps can be used to install docker on Ubuntu Xenial 16.04 (LTS), Ubuntu Bionic 18.04 (LTS), and Ubuntu Eoan 19.10 distro.
 
 
 1. `sudo apt-get remove docker docker-engine docker.io containerd runc`
@@ -55,7 +55,7 @@ To verify the correct installation, you can run the following command:
 
 10. `docker run hello-world`
 
-The output of above should give message about correct installation.
+The output of the above should give a message about the correct installation.
 
 To install docker for other Linux distro, please follows the steps on the links provided above.
 
@@ -98,6 +98,6 @@ then, the following command can be used for the prediction without any change on
 docker run --rm -ti -v /home/$USER/RNAcmap_data/database/:/nt_database -v /home/$USER/RNAcmap_data/:/mnt jaswindersingh2/rnacmap:latest RNAcmap mnt/seq1.fasta RNAfold GRMLIN
 ```
 
-You can provide the any other input sequence, Secondary Structure Predictor (RNAfold or SPOT-RNA) and DCA predictor (GREMLIN or plmc) but order of the arguments should remains same. 
+You can provide any other input sequence, Secondary Structure Predictor (RNAfold or SPOT-RNA), and DCA predictor (GREMLIN or plmc) but the order of the arguments should remain the same. 
 
-If you are running RNAcmap without pre downloading of the nt database, then it can take couple of hours for first time prediction. 
+If you are running RNAcmap without pre-downloading of the nt database, then it can take a couple of hours for first time prediction. 
